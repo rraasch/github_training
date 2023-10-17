@@ -1,3 +1,6 @@
+#requirements for the project
 black
 pytest
 json
+numpy
+pandas
