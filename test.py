@@ -1,7 +1,9 @@
-#test.py
+# test.py
 
 import pytest
+import json
 from main import main
 
+
 def test_main():
-  assert main() == True
+    assert json.loads(main())['message'] == "SUCCESS"
