@@ -1,6 +1,5 @@
 import json
 
-
 def main():
     print("Hello! This is main.")
     return json.dumps({"message": "SUCCESS"})
