@@ -19,6 +19,8 @@ jobs:
       # You can test your matrix by printing the current Python version
       - name: Display Python version
         run: python -c "import sys; print(sys.version)"
+      - name: install dependencies
+        run: pip install -U pip && pip install pytest pylint
       - name: Test the code
         run: pytest test.py
       - name: lint the code
