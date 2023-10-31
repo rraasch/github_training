@@ -22,15 +22,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install pytest
       - name: Test with pytest
-        run: pytest test.py --junitxml=junit/test-results-${{ matrix.python-version }}.xml
+        run: pytest test.py >> /test_results.txt
       - name: Upload pytest test results
         uses: actions/upload-artifact@v3
         with:
-          name: pytest-results-${{ matrix.python-version }}
-          path: junit/test-results-${{ matrix.python-version }}.xml
+          name: test_results.txt
+          path: /test_results.txt
         # Use always() to always run this step to publish test results when there are test failures
         if: ${{ always() }}
-        - run: echo hi > world.txt
-        - uses: actions/upload-artifact@v3
-          with:
-            path: world.txt
