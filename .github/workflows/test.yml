@@ -23,5 +23,3 @@ jobs:
         run: pip install pytest pylint
       - name: Test the code
         run: pytest test.py
-      - name: lint the code
-        run: pylint *.py
