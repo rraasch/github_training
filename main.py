@@ -1,6 +1,7 @@
 import json
 
 def main():
+    """docstring"""
     print("Hello! This is main.")
     return json.dumps({"message": "SUCCESS"})
 
