@@ -1,4 +1,4 @@
-name: Python package
+name: run test.py
 
 on: [push]
 
